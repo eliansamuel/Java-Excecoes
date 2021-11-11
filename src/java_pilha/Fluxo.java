@@ -6,9 +6,9 @@ public class Fluxo {
         System.out.println("Ini do main");
         try {
         metodo1();
-    	} catch (ArithmeticException | NullPointerException ex) { // ex eh uma referencia e ArithmeticException eh uma classe
+    	} catch (ArithmeticException | NullPointerException | MinhaExececao ex) { // ex eh uma referencia e ArithmeticException eh uma classe
     		String msg = ex.getMessage();
-    		System.out.println("Exception" + msg);
+    		System.out.println("Exception " + msg);
     		ex.printStackTrace();
     	}
         System.out.println("Fim do main");
@@ -22,7 +22,7 @@ public class Fluxo {
 
     private static void metodo2() {
         System.out.println("Ini do metodo2");
-        throw new ArithmeticException(" deu errado!");
+        throw new MinhaExececao("deu errado!");
         // System.out.println("Fim do metodo2");
         }
     
