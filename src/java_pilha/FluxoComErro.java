@@ -1,12 +1,14 @@
 package java_pilha;
 
+import javax.sound.midi.MidiUnavailableException;
+
 public class FluxoComErro {
 
     public static void main(String[] args) {
         System.out.println("Ini do main");
         try {
         metodo1();
-    	} catch (ArithmeticException | NullPointerException | MinhaExececao ex) { // ex eh uma referencia e ArithmeticException eh uma classe
+    	} catch (ArithmeticException | NullPointerException ex) { // ex eh uma referencia e ArithmeticException eh uma classe
     		String msg = ex.getMessage();
     		System.out.println("Exception " + msg);
     		ex.printStackTrace();
